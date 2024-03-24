@@ -39,6 +39,7 @@ const NavBar = () => {
             </ul>
           )}
         </li>
+        <li className="navbar-item" onClick={closeMobileMenu}><Link to={"/blog"}>Blog</Link></li>
         <li className="navbar-item" onClick={closeMobileMenu}><a onClick={scrollDown}>Contacto</a></li>
       </ul>
     </nav>
