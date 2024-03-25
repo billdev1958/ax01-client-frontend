@@ -41,7 +41,7 @@ function BlogPage() {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/posts/get`);
+        const response = await fetch(`https://api.ax01.dev/posts/get`);
         if (response.ok) {
           const data: BlogPost[] = await response.json();
           setPosts(data);

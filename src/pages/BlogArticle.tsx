@@ -49,7 +49,7 @@ type BlogPostType = {
     useEffect(() => {
       const fetchArticle = async () => {
         try {
-          const response = await fetch(`http://localhost:8080/api/post/get/${id}`); // Realiza una solicitud para obtener el artículo del blog
+          const response = await fetch(`https://api.ax01.dev/post/get/${id}`); // Realiza una solicitud para obtener el artículo del blog
           if (response.ok) {
             const data: BlogPostType = await response.json(); // Convierte la respuesta en JSON
             setArticle(data); // Actualiza el estado con el artículo del blog
