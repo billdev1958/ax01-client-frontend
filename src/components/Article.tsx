@@ -1,10 +1,12 @@
+import ReactMarkdown from 'react-markdown';
+
 type BlogPostType = {
   id: number;
   title: string;
   category: string;
   content: string;
   author: string;
-  date: string; // Puedes usar Date para un tipo más específico, pero requerirá formateo
+  date: string;
 };
 
 const Article = ({ id, title, category, content, author, date }: BlogPostType) => {
@@ -18,15 +20,15 @@ const Article = ({ id, title, category, content, author, date }: BlogPostType) =
             <p className="blogPostMeta">
               {author} - {date}
             </p>
-            <p className="blogPostMeta">ID: {id}</p> {/* Agrega el ID aquí */}
+            <p className="blogPostMeta">ID: {id}</p>
           </header>
           <section className="blogPostContent">
-            <p>{content}</p>
+            {/* Aquí utilizamos ReactMarkdown para renderizar el contenido */}
+            <ReactMarkdown>{content}</ReactMarkdown>
           </section>
         </article>
       </div>
     </div>
   );
 };
-  
   export default Article;
