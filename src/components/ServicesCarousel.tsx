@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import MinimalistCard from "../components/Card";
 import negocio from "../assets/negocio.svg";
