@@ -1,5 +1,6 @@
 @use './components/navBar';
 @use './components/header.scss';
+@use './components/headerContact.scss';
 @use './components/buttons.scss';
 @use './components/card.scss';
 @use './components/sections.scss';
@@ -19,4 +20,5 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }

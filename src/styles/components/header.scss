@@ -1,236 +1,448 @@
 .header {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header-logo {
-    width: 25fr; /* O el tamaño que prefieras para tu logo */
-    margin-bottom: 20px;
-  }
-  
-  .text-container{
-    text-align: start;
-    margin-right: 10rem; /* Considerar ajustar este margen para dispositivos más pequeños */
-    display: flex; /* Habilita flexbox para este contenedor */
-    flex-direction: column; /* Organiza los elementos en una columna */
-    align-items: center; 
-  }
-
-  .header-title {
-    font-size: 2rem;
-    color: aliceblue;
-    margin: 0;
-  }
-  .header-subtitle-h2 {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    color: aliceblue;
-    margin: 0;
-  }
-.header-subtitle-h3{
-  margin-top: 2rem;
-  font-size: 1rem;
-  color: grey;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #121212 30%, #2c3e50 100%);
 }
 
-/* Ajuste para responsividad */
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.text-container {
+  max-width: 55%;
+}
+
+.header-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #f1f1f1;
+  margin: 0 0 1.5rem;
+}
+
+.header-subtitle-h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #b3b3b3;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.header-button {
+  background-color: transparent;
+  border: 2px solid #f39c12; /* Color dorado para destacar */
+  color: #f39c12;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-button:hover {
+  background-color: #f39c12;
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(243, 156, 18, 0.4);
+}
+
+.header-logo {
+  width: 250px;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0px 0px 15px #f39c12);
+}
+
+.header-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 25px #f39c12);
+}
+
+/* Keyframes for enhanced logo animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Particle Background */
+@keyframes particles {
+  0% { transform: translateY(0); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-200vh); opacity: 0; }
+}
+
+.particle {
+  position: absolute;
+  top: 100%;
+  left: calc(100% * var(--x));
+  width: 4px;
+  height: 4px;
+  background: #f39c12;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: particles var(--duration) linear infinite;
+}
+
+/* Responsiveness for mobile */
 @media (max-width: 768px) {
   .header-content {
-      flex-direction: column;
-  }
-
-  .header-logo {
-      order: -1; /* Coloca el logo arriba */
-      width: 50%; /* Ajusta el tamaño del logo para pantallas pequeñas */
-      margin-bottom: 10px; /* Reduce el margen */
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
   }
 
   .text-container {
-      margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
   }
 
-  .header-title, .header-subtitle-h2 {
-      font-size: 1.2rem; /* Reduce el tamaño del texto para dispositivos más pequeños */
-      text-align: center; /* Asegura que el texto esté centrado bajo el logo */
+  .header-logo {
+    width: 180px;
+    margin-bottom: 1.5rem;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .header-title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .header-subtitle-h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .header-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    align-self: center; /* Asegura que el botón esté centrado */
   }
 }
 
 @media (max-width: 480px) {
+  .header-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
   .header-logo {
-      width: 60%; /* Ajusta el tamaño para dispositivos muy pequeños */
+    width: 150px;
+    margin-bottom: 1rem;
   }
 
-  .header-title, .header-subtitle-h2 {
-      font-size: 1rem; /* Ajuste adicional para pantallas muy pequeñas */
+  .header-title {
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .header-subtitle-h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .header-button {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    align-self: center; /* Asegura que el botón esté centrado */
   }
 }
 
-// Header blue
-.header-b {
-  width: 100%;
-  background-color: #007bff;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-
-
-//Header white
+// Header calro
 .header-w {
-  width: 100%;
-  background-color: aliceblue;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  height: 100vh;
+  background-color: #ffffff; /* Fondo blanco para contraste */
 }
 
 .header-content-w {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Cambiado para separar el texto y el logo */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.header-logo-w {
-  width: 20%; /* O el tamaño que prefieras para tu logo */
-  margin-left: 20px; /* Ajusta según sea necesario para alinear */
-  order: 2; /* Asegura que el logo esté al final en pantallas grandes */
-}
-
-.text-container-w{
-  text-align: start;
-  margin-right: 10rem;
-  order: 1; /* Asegura que el texto esté al principio */
-  flex: 1; /* Permite que el contenedor de texto ocupe todo el espacio disponible */
-}
-
-.header-title-w, .header-subtitle-h2-w, .header-subtitle-h3-w {
-  color: black;
-  margin: 0;
+.text-container-w {
+  max-width: 60%;
 }
 
 .header-title-w {
-  font-size: 2rem;
-}
-
-.header-subtitle-h2-w, .header-subtitle-h3-w {
-  margin-top: 2rem;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #2c3e50; /* Azul oscuro */
+  margin: 0 0 1.2rem;
 }
 
 .header-subtitle-h2-w {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #34495e; /* Azul grisáceo */
+  margin-bottom: 1rem;
 }
 
 .header-subtitle-h3-w {
-  font-size: 1rem;
-  color: grey;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #666; /* Gris medio para menor jerarquía */
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
-/* Ajustes para responsividad */
-@media (max-width: 768px) {
+.header-logo-w {
+  width: 280px;
+  animation: float 5s ease-in-out infinite;
+  transition: transform 0.3s;
+  filter: drop-shadow(0px 0px 8px #ccc); /* Sombra suave para dar relieve */
+}
+
+.header-logo-w:hover {
+  transform: scale(1.08);
+}
+
+/* Keyframes for subtle logo animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsiveness for tablet and mobile */
+@media (max-width: 1024px) {
   .header-content-w {
-    flex-direction: column-reverse; /* Cambia el orden: logo arriba, texto abajo */
+    flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
+    padding: 2rem 1rem;
   }
 
-  .text-container-w, .header-logo-w {
-    margin-right: 0;
-    margin-left: 0; /* Elimina los márgenes laterales para centrar en pantallas pequeñas */
+  .text-container-w {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-title-w {
+    font-size: 2.5rem;
+  }
+
+  .header-subtitle-h2-w {
+    font-size: 1.4rem;
+  }
+
+  .header-subtitle-h3-w {
+    font-size: 1rem;
   }
 
   .header-logo-w {
-    width: 50%; /* Ajusta el tamaño del logo para pantallas más pequeñas */
-    margin-bottom: 20px; /* Espacio entre el logo y el texto */
-  }
-
-  .header-title-w, .header-subtitle-h2-w, .header-subtitle-h3-w {
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    width: 240px;
+    margin-bottom: 1.5rem;
   }
 }
 
-//Contact header
-.contact-header {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #333; /* Texto oscuro para contraste */
-  padding: 60px 20px; /* Aumenta el padding vertical para más altura */
-  text-align: center; /* Centrar el contenido */
-  border-bottom: 2px solid #eaeaea; /* Línea sutil en la parte inferior, más gruesa */
-}
-
-.contact-container h1, .contact-info p, .social-icons a {
-  margin-bottom: 30px; /* Espacio debajo de cada sección */
-}
-
-.contact-container h1 {
-  font-size: 30px; /* Título más grande */
-}
-
-.contact-info, .social-icons {
-  display: flex;
-  justify-content: center; /* Centrado horizontal */
-  gap: 40px; /* Espacio entre elementos */
-}
-
-.contact-info p, .social-icons a {
-  font-size: 20px; /* Tamaño para contacto y íconos */
-  display: flex;
-  align-items: center; /* Alineación vertical */
-}
-
-.contact-info i, .social-icons i {
-  margin-right: 12px; /* Espacio antes del texto/ícono */
-  font-size: 24px; /* Íconos más grandes */
-}
-
-.social-icons a {
-  color: #333; /* Color de íconos */
-  text-decoration: none; /* Sin subrayado */
-}
-
-.social-icons a:hover {
-  color: #007bff; /* Color al pasar el ratón */
-}
-
-/* Ajustes responsivos */
 @media (max-width: 768px) {
-  .contact-header {
-    padding: 30px 10px; /* Reduce el padding en pantallas pequeñas */
+  .header-content-w {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
   }
 
-  .contact-container h1 {
-    font-size: 24px; /* Reduce el tamaño del título para pantallas pequeñas */
+  .header-title-w {
+    font-size: 2.2rem;
   }
 
-  .contact-info {
-    flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
-    gap: 20px; /* Reduce el espacio entre elementos */
+  .header-subtitle-h2-w {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
-  .contact-info p {
-    font-size: 18px; /* Ajusta el tamaño del texto para mejorar la legibilidad */
+  .header-subtitle-h3-w {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
   }
 
-  .contact-info i {
-    font-size: 22px; /* Ajusta ligeramente el tamaño de los íconos */
+  .header-logo-w {
+    width: 200px;
   }
 }
 
-/* Si has descomentado y deseas incluir los estilos de .social-icons, asegúrate de adaptarlos de manera similar */
-@media (max-width: 768px) {
-  .social-icons {
-    gap: 20px; /* Ajusta el espacio entre los íconos */
+@media (max-width: 480px) {
+  .header-content-w {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
   }
 
-  .social-icons a {
-    font-size: 18px; /* Ajusta el tamaño de los íconos para dispositivos móviles */
+  .header-title-w {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .header-subtitle-h2-w {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .header-subtitle-h3-w {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .header-logo-w {
+    width: 180px;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+/* General Styles for the Services Carousel Container */
+.services-header {
+  padding: 3rem 1.5rem;
+  background-color: #fafafa; /* Fondo claro */
+  color: #2c3e50; /* Azul oscuro para texto */
+}
+
+.services-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* General Styles for the Services Carousel Container */
+.services-header {
+  padding: 3rem 1.5rem;
+  background-color: #fafafa; /* Fondo claro */
+  color: #2c3e50; /* Azul oscuro para texto */
+}
+
+.services-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Cards Container */
+.services-cards-container {
+  display: flex;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: none; /* Ocultar la barra de desplazamiento para Firefox */
+}
+
+.services-cards-container::-webkit-scrollbar {
+  display: none; /* Ocultar la barra de desplazamiento para Chrome, Safari y Opera */
+}
+
+/* Card Styles (Adjust according to the card component styles) */
+.minimalist-card {
+  flex: 0 0 auto; /* Ensure cards don't shrink */
+  width: 300px; /* Fixed width for cards */
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Adjust the images inside the cards */
+.minimalist-card img {
+  width: 80px; /* Reduce the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80px; /* Limit the maximum height */
+  margin-bottom: 1rem;
+}
+
+/* Carousel Buttons */
+.services-carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.services-carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.services-left {
+  left: 10px;
+}
+
+.services-right {
+  right: 10px;
+}
+
+/* Mobile Styles - Show Carousel Buttons Only on Mobile */
+@media (max-width: 1024px) {
+  .services-carousel-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-cards-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .services-header {
+    text-align: center;
+  }
+}
+
+/* Hide Carousel Buttons on Large Screens */
+@media (min-width: 1025px) {
+  .services-carousel-button {
+    display: none;
   }
 }

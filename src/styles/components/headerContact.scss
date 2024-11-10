@@ -1,0 +1,80 @@
+/* General Contact Section Styles */
+.contact-header {
+    background-color: #fafafa; /* Fondo claro */
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: #2c3e50; /* Azul oscuro para texto */
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Title Styling */
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  /* Contact Information Styling */
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-icon {
+    margin-right: 0.5rem;
+    color: #2c3e50; /* Azul oscuro */
+  }
+  
+  .contact-link {
+    color: #2c3e50; /* Azul oscuro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #9c8414; /* Cambiar al color dorado al pasar el cursor */
+  }
+  
+  /* Social Icons Styling */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    font-size: 1.5rem;
+    color: #2c3e50; /* Azul oscuro */
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #9c8414; /* Cambiar al color dorado al pasar el cursor */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 1.5rem;
+    }
+  
+    .contact-info p {
+      font-size: 1rem;
+    }
+  
+    .social-link {
+      font-size: 1.2rem;
+    }
+  }
+  
