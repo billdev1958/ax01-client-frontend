@@ -1,5 +1,5 @@
 # Etapa 1: Construcción de la aplicación
-FROM node:16-alpine AS builder
+FROM node:23-alpine3.19 AS builder
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copia el archivo de configuración de Nginx personalizado (que incluye HTTPS)
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 # Copia los archivos de certificados SSL para HTTPS
 COPY certificates/origin-cert.pem /etc/ssl/certs/origin-cert.pem
@@ -29,8 +29,9 @@ COPY certificates/origin-key.pem /etc/ssl/private/origin-key.pem
 # Copia los archivos estáticos generados en la etapa de construcción al directorio predeterminado de Nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Exponer el puerto 443 para acceso HTTPS
-EXPOSE 443
+# Exponer los puertos 80 y 443 para HTTP y HTTPS
+EXPOSE 80 443
 
 # Iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
+
