@@ -1,7 +1,7 @@
-import nube from "../assets/nube-logo.svg"
-import consultoria from "../assets/consultoria-logo.svg"
-import weblogo from "../assets/web-logo.svg"
-import softwarelogo from "../assets/software-logo.svg"
+import nube from "../assets/images/nube-logo.svg"
+import consultoria from "../assets/images/consultoria-logo.svg"
+import weblogo from "../assets/images/web-logo.svg"
+import softwarelogo from "../assets/images/software-logo.svg"
 import { useState } from 'react';
 
 

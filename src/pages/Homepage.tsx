@@ -1,8 +1,8 @@
 import Header from "../components/Header"
-import worldlogo from "../assets/logoworld.svg"
+import worldlogo from "../assets/images/logoworld.svg"
 
-import linuxLogo from "../assets/linuxLogo.png"
-import openLogo from "../assets/opensource2.png"
+import linuxLogo from "../assets/images/linuxLogo.png"
+import openLogo from "../assets/images/opensource2.png"
 import ServicesCarousel from "../components/ServicesCarousel"
 
 function Homepage() {

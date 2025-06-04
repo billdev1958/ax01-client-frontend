@@ -1,6 +1,6 @@
-import worldlogo from "../assets/logoworld.svg"
-import logo from "../assets/logo-ax01-500px.svg"
-import openLogo from "../assets/opensource.webp"
+import worldlogo from "../assets/images/logoworld.svg"
+import logo from "../assets/images/logo-ax01-500px.svg"
+import openLogo from "../assets/images/opensource.webp"
 
 
 function Nosotros() {

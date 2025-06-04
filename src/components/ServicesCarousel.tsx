@@ -1,9 +1,9 @@
 import  { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import MinimalistCard from "../components/Card";
-import negocio from "../assets/negocio.svg";
-import ciencia from "../assets/cientifico.svg";
-import logo from "../assets/black2.svg";
+import negocio from "../assets/images/negocio.svg";
+import ciencia from "../assets/images/cientifico.svg";
+import logo from "../assets/images/black2.svg";
 
 const ServicesCarousel = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);

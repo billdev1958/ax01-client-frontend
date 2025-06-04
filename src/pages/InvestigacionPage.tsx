@@ -1,5 +1,5 @@
-import softwarelogo from "../assets/software-logo.svg"
-import ciencia from "../assets/cientifico.svg"
+import softwarelogo from "../assets/images/software-logo.svg"
+import ciencia from "../assets/images/cientifico.svg"
 
 
 function InvestigacionPage() {
