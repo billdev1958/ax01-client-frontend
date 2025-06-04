@@ -1,4 +1,4 @@
-import logo from "../assets/images/ax01.png"
+import logo from "../assets/images/logos/LogoConLetras.svg"
 const scrollDown = () => {
     // Obtiene el ancho de la ventana del navegador
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;

@@ -1,5 +1,5 @@
 # Etapa 1: Construcción de la aplicación
-FROM node:23-alpine3.19 AS builder
+FROM node:24-alpine AS builder
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app

@@ -12,7 +12,8 @@
 
 .navbar-logo {
   font-size: 1.5rem;
-  font-family: "mexica-black";
+  font-weight: bold;
+  font-family: "mexica-roman";
 }
 
 .navbar-menu {
@@ -1019,39 +1020,23 @@ body {
   font-family: "robotolight", sans-serif;
 }
 
-/*
 @font-face {
-	font-family: 'robotolight';
-	src: url('../src/assets/fonts/Roboto-Light.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "robotolight";
+  src: url("../src/assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-	font-family: 'mexica-roman';
-	src: url('../src/assets/fonts/Mexica-Roman.woff2') format('woff2'),
-	     url('../src/assets/fonts/Mexica-Roman.woff') format('woff'),
-	     url('../src/assets/fonts/Mexica-Roman.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "mexica-roman";
+  src: url("../src/assets/fonts/Mexica-Roman.woff2") format("woff2"), url("../src/assets/fonts/Mexica-Roman.woff") format("woff"), url("../src/assets/fonts/Mexica-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-	font-family: 'mexica-black';
-	src: url('../src/assets/fonts/Mexica-Black.woff2') format('woff2'),
-	     url('../src/assets/fonts/Mexica-Black.woff') format('woff'),
-	     url('../src/assets/fonts/Mexica-Black.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "mexica-black";
+  src: url("../src/assets/fonts/Mexica-Black.woff2") format("woff2"), url("../src/assets/fonts/Mexica-Black.woff") format("woff"), url("../src/assets/fonts/Mexica-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-p, input, button {
-	font-family: 'robotolight', sans-serif;
-}
-
-h1 {
-	font-family: 'mexica-black', serif;
-}
-*/
 
 /*# sourceMappingURL=index.css.map */
