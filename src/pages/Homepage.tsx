@@ -4,6 +4,7 @@ import worldlogo from "../assets/images/logoworld.svg"
 import linuxLogo from "../assets/images/linuxLogo.png"
 import openLogo from "../assets/images/opensource2.png"
 import ServicesCarousel from "../components/ServicesCarousel"
+import ProductsHeader from "../components/ProductsHeader"
 
 function Homepage() {
 
@@ -50,6 +51,7 @@ function Homepage() {
                     <img src={openLogo} className="header-logo-w" alt="logo" />
                 </div>
             </header>
+            <ProductsHeader/>
         </>
     )
 }
